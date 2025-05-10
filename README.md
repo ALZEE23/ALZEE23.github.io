@@ -2,8 +2,9 @@
 
 Selamat datang di dokumentasi terbuka milik **ALZEE23**!  
 Repositori ini berisi koleksi dokumentasi dari berbagai proyek, eksperimen, dan catatan pribadi seputar pemrograman, pengembangan game, AI, dan lainnya.
+Karena gua sering lupa btw, dan gak tau kenapa semenjak gua sering pake ai gua jadi sering lupa dan secara gak sadar bergantung sama ai.
 
-Semua dokumentasi dikelompokkan dalam folder sesuai dengan topik atau nama proyeknya.
+Semua dokumentasi dikelompokkan dalam folder sesuai dengan topik.
 
 ---
 
@@ -11,20 +12,37 @@ Semua dokumentasi dikelompokkan dalam folder sesuai dengan topik atau nama proye
 
 Berikut beberapa dokumentasi yang tersedia:
 
-- [`/unity-combat-system`](./unity-combat-system/)
+- [`/unity`](./unity/)
 
-  > Dokumentasi sistem combo dan pertempuran dinamis di Unity (termasuk queue system, input chaining, dan knockback logic).
+  > Isinya tips & trick aja sih atau kadang hal-hal teknis di unity yang kadang gua suka lupa.
 
-- [`/ai-navmesh`](./ai-navmesh/)
+- [`/mechanics`](./mechanics/)
 
-  > Catatan tentang implementasi AI dengan NavMesh di Unity, termasuk rotasi dan pengejaran berdasarkan trigger.
+  > Ini isi kodingan C# yang pernah gua buat karena jujur syntax C# sering lupa karena panjang jir.
 
-- [`/golang-api`](./golang-api/)
+- [`/api`](./api/)
 
-  > Setup backend API menggunakan Golang dengan PostgreSQL dan Docker Compose.
+  > Terkhusus pekerjaan yang bener-bener gua nyaman dan suka bet bikin api coy.
 
-- [`/ink-dialogue`](./ink-dialogue/)
-  > Panduan integrasi Ink dengan Unity untuk sistem percabangan cerita berbasis moral.
+- [`/frontend`](./frontend)
+
+  > Males Bat sama perpront pront prot lah tapi gua juga gak suka sih kalo website tampilan nya kayak tai.
+
+- [`/math`](./math/)
+
+  > Kenapa matematika itu jadi berpengaruh banget di setiap koding mengoding jir.
+
+- [`/fundamental`](./fundamental/)
+
+  > Ini ngajarin struktur data big o notaion sama time & space complexity.
+
+- [`/linux`](./linux)
+
+  > Ini buat inget-inget aja kalo lupa cli atau kebodohan gua tentang linux.
+
+- [`/pentesting`](./pentesting)
+
+  > Nah gua sebenarnya lagi tertarik banget sama cybersecurity.
 
 ---
 
