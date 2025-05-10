@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="global.css">
+
 # ALZEE23.github.io
 
 Selamat datang di dokumentasi terbuka milik **ALZEE23**!  
