@@ -14,15 +14,15 @@ Berikut beberapa dokumentasi yang tersedia:
 
 - [`/unity`](./unity/)
 
-  > Isinya tips & trick aja sih atau kadang hal-hal teknis di unity yang kadang gua suka lupa.
+  > Isinya tips & trick aja sih atau kadang hal-hal teknis di unity yang kadang gua suka lupa dan Ini isi kodingan C# yang pernah gua buat karena jujur syntax C# sering lupa karena panjang jir.
 
 - [`/mechanics`](./mechanics/)
 
-  > Ini isi kodingan C# yang pernah gua buat karena jujur syntax C# sering lupa karena panjang jir.
+  > Ini isinya itu apa tentang mechanic game yang ingin dan gua pernah kepikiran atau lihat gitu siapa tau gua bakal pake.
 
 - [`/api`](./api/)
 
-  > Terkhusus pekerjaan yang bener-bener gua nyaman dan suka bet bikin api coy.
+  > Lopyuu pekerjaan yang bener-bener gua nyaman dan gua suka bet bikin api coy.
 
 - [`/frontend`](./frontend)
 
@@ -30,7 +30,7 @@ Berikut beberapa dokumentasi yang tersedia:
 
 - [`/math`](./math/)
 
-  > Kenapa matematika itu jadi berpengaruh banget di setiap koding mengoding jir.
+  > Jawaban dari kenapa matematika itu jadi penting banget di setiap koding mengoding jir.
 
 - [`/fundamental`](./fundamental/)
 
@@ -44,7 +44,20 @@ Berikut beberapa dokumentasi yang tersedia:
 
   > Nah gua sebenarnya lagi tertarik banget sama cybersecurity.
 
----
+- [`/software-architecture`](./software-architecture)
+
+  > Kalo ini isinya seputar teknologi apa aja yang bisa di pake di sebuah software atau arsitekturnya lah.
+
+- [`/app-experiment`](./app-experiment)
+
+  > ini experiment aja bikin aplikasi gak jelas pake bahasa pemrograman yang gua penasaran.
+
+- [`/machine-learning`](./machine-learning)
+
+  > Belajar machine learning biar gak jadi pengangguran.
+
+
+- ***
 
 ## 📌 Struktur dan Format
 
