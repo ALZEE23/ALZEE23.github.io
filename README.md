@@ -20,7 +20,7 @@ Berikut beberapa dokumentasi yang tersedia:
 
 - [`/mechanics`](./mechanics/)
 
-  > Ini isinya itu apa tentang mechanic game yang ingin dan gua pernah kepikiran atau lihat gitu siapa tau gua bakal pake.
+  > Ini isinya itu tentang mechanic game yang ingin dan gua pernah kepikiran atau lihat gitu siapa tau gua bakal pake.
 
 - [`/api`](./api/)
 
