@@ -57,7 +57,7 @@ Berikut beberapa dokumentasi yang tersedia:
   > Belajar machine learning biar gak jadi pengangguran.
 
 
-- ***
+***
 
 ## 📌 Struktur dan Format
 
