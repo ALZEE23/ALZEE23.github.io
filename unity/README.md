@@ -28,6 +28,9 @@ Fokus utamanya adalah menyimpan solusi untuk masalah umum yang sering ditemui da
 - [`/shadergraph`](./shadergraph/)
   > Kumpulan shader dan efek visual menggunakan ShaderGraph.
 
+- [`/component`](./component/)
+  > Implementasi penggunaan component.
+
 ## 🎮 Penggunaan
 
 Setiap folder memiliki dokumentasi spesifik tentang:
