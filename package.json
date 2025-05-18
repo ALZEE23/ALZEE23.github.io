@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "astro preview"
+    "preview": "astro preview",
+    "deploy": "astro build && gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -22,5 +23,8 @@
   "homepage": "https://github.com/ALZEE23/ALZEE23.github.io#readme",
   "dependencies": {
     "astro": "^5.7.13"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
