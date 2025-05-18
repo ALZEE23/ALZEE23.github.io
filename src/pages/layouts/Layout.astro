@@ -1,0 +1,82 @@
+---
+const { title = "Dokumentasi", description = "" } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <style>
+      :root {
+        --bg: #fdfdfd;
+        --fg: #1a1a1a;
+        --accent: #0366d6;
+        --max-width: 760px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--fg);
+        font-family: system-ui, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        max-width: var(--max-width);
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.6;
+      }
+
+      header {
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 2rem;
+        padding-bottom: 1rem;
+      }
+
+      h1,
+      h2,
+      h3 {
+        color: var(--fg);
+        margin-top: 1.5rem;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      nav a {
+        margin-right: 1rem;
+        font-weight: bold;
+      }
+
+      pre {
+        background: #f6f8fa;
+        padding: 1rem;
+        border-radius: 6px;
+        overflow: auto;
+      }
+
+      code {
+        font-family: monospace;
+        background: #f0f0f0;
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

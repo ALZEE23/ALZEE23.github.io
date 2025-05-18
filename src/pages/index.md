@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="global.css">
+---
+layout: ../../layouts/Layout.astro
+---
 
 # ALZEE23.github.io
 
