@@ -1,0 +1,108 @@
+<!DOCTYPE html><meta charset="utf-8"><h1 id="unity-component-implementation">Unity Component Implementation</h1>
+<p>Dokumentasi ini berisi penjelasan dan contoh implementasi component di Unity.</p>
+<h2 id="-daftar-component">📋 Daftar Component</h2>
+<ul>
+<li>
+<p><a href="#-child-component"><code>/child-component</code></a></p>
+<blockquote>
+<p>Implementasi untuk menggunakan atau memanipulasi child component.</p>
+</blockquote>
+</li>
+<li>
+<p><a href="./save-system/"><code>/rigidbody</code></a></p>
+<blockquote>
+<p>Sistem save dan load data game menggunakan ScriptableObjects.</p>
+</blockquote>
+</li>
+<li>
+<p><a href="./event-system/"><code>/event-system</code></a></p>
+<blockquote>
+<p>Implementasi event system untuk komunikasi antar component.</p>
+</blockquote>
+</li>
+<li>
+<p><a href="./singleton/"><code>/singleton</code></a></p>
+<blockquote>
+<p>Pattern singleton untuk manager dan service classes.</p>
+</blockquote>
+</li>
+<li>
+<p><a href="./state-machine/"><code>/state-machine</code></a></p>
+<blockquote>
+<p>Implementasi state machine untuk behavior management.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="-get-child-component">📝 Get Child Component</h2>
+<p>Ini contoh kalo mau menggunakan atau mengganti component child tapi dari script yang ada di parent ini berguna banget apalagi kalo child nya ada banyak</p>
+<ul>
+<li>Contoh untuk Mengambil semua posisi child dalam sebuah parent lalu mengganti layer nya saay di click mouse</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="csharp"><code><span class="line"><span style="color:#F97583">public</span><span style="color:#F97583"> class</span><span style="color:#B392F0"> ExampleComponent</span><span style="color:#E1E4E8"> : </span><span style="color:#B392F0">MonoBehaviour</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#F97583"> int</span><span style="color:#B392F0"> defaultLayer</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#F97583"> int</span><span style="color:#B392F0"> outlineLayer</span><span style="color:#F97583"> =</span><span style="color:#79B8FF"> 10</span><span style="color:#E1E4E8">; </span><span style="color:#6A737D">// ini adalah cara mengambil layer namun dengan urutan nya</span></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#B392F0"> Transform</span><span style="color:#E1E4E8">[] </span><span style="color:#B392F0">allChildren</span><span style="color:#E1E4E8">; </span><span style="color:#6A737D">// buat sebuah array list kosong dimana untuk menampung semua component child</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> Start</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span></span>
+<span class="line"><span style="color:#E1E4E8">        defaultLayer </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> gameObject.layer; </span><span style="color:#6A737D">// setiap gameobject pasti memiliki layer nah dengan begini maka gamobject yang memiliki script ini akan di ambil layer untuk disimpan</span></span>
+<span class="line"><span style="color:#E1E4E8">        allChildren </span><span style="color:#F97583">=</span><span style="color:#B392F0"> GetComponentsInChildren</span><span style="color:#E1E4E8">&#x3C;</span><span style="color:#B392F0">Transform</span><span style="color:#E1E4E8">>(</span><span style="color:#79B8FF">true</span><span style="color:#E1E4E8">); </span><span style="color:#6A737D">// saat game dimulai maka getcomponents in children akan bekerja dan mengambil semua child dengan true sebagai trigger nya</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> OnMouseEnter</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span></span>
+<span class="line"><span style="color:#F97583">        foreach</span><span style="color:#E1E4E8"> (</span><span style="color:#B392F0">Transform</span><span style="color:#B392F0"> child</span><span style="color:#F97583"> in</span><span style="color:#E1E4E8"> allChildren) </span><span style="color:#6A737D">// lalu kita gunakan for loop untuk mengganti semua component yang ada di dalam array all children karena kalo gak di for loop gini nanti cuman index 0 doang yang ke ganti</span></span>
+<span class="line"><span style="color:#E1E4E8">        {</span></span>
+<span class="line"><span style="color:#E1E4E8">            child.gameObject.layer </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> outlineLayer; </span><span style="color:#6A737D">// panggil si variable for loop nya dan ini harus di specified yaitu type nya transform karena all children itu transform</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    private</span><span style="color:#F97583"> void</span><span style="color:#B392F0"> OnMouseExit</span><span style="color:#E1E4E8">()</span></span>
+<span class="line"><span style="color:#E1E4E8">    {</span></span>
+<span class="line"><span style="color:#F97583">        foreach</span><span style="color:#E1E4E8"> (</span><span style="color:#B392F0">Transform</span><span style="color:#B392F0"> child</span><span style="color:#F97583"> in</span><span style="color:#E1E4E8"> allChildren)</span></span>
+<span class="line"><span style="color:#E1E4E8">        {</span></span>
+<span class="line"><span style="color:#E1E4E8">            child.gameObject.layer </span><span style="color:#F97583">=</span><span style="color:#E1E4E8"> defaultLayer;</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<ul>
+<li>Contoh Untuk Membuat sebuah Card Slot Manager yang dimana akan menampilkan data atau prefab ke child sebuah parent</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="csharp"><code><span class="line"><span style="color:#F97583">public</span><span style="color:#F97583"> class</span><span style="color:#B392F0"> CardSlotManager</span><span style="color:#E1E4E8"> : </span><span style="color:#B392F0">Monobehaviour</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#B392F0"> List</span><span style="color:#E1E4E8">&#x3C;</span><span style="color:#B392F0">Card</span><span style="color:#E1E4E8">> </span><span style="color:#B392F0">cardData</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#B392F0"> Transform</span><span style="color:#B392F0"> parentSlot</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    void</span><span style="color:#B392F0"> Start</span><span style="color:#E1E4E8">(){</span></span>
+<span class="line"><span style="color:#F97583">        foreach</span><span style="color:#E1E4E8"> ( </span><span style="color:#B392F0">Card</span><span style="color:#B392F0"> cards</span><span style="color:#F97583"> in</span><span style="color:#E1E4E8"> cardData ){</span></span>
+<span class="line"><span style="color:#E1E4E8">          Debug.</span><span style="color:#B392F0">Log</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"Name"</span><span style="color:#F97583"> +</span><span style="color:#E1E4E8"> cards.name);</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#B392F0">        CardInstantiate</span><span style="color:#E1E4E8">();</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#B392F0"> CardInstantiate</span><span style="color:#E1E4E8">(){</span></span>
+<span class="line"><span style="color:#F97583">      foreach</span><span style="color:#E1E4E8"> ( </span><span style="color:#B392F0">Card</span><span style="color:#B392F0"> cards</span><span style="color:#F97583"> in</span><span style="color:#E1E4E8"> cardData ){</span></span>
+<span class="line"><span style="color:#B392F0">        Instantiate</span><span style="color:#E1E4E8">(cards.cardPrefab, parentSlot.transform, Quaternion.identity, parentSlot)</span></span>
+<span class="line"><span style="color:#E1E4E8">      }</span></span>
+<span class="line"><span style="color:#E1E4E8">    }</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#F97583">public</span><span style="color:#F97583"> class</span><span style="color:#B392F0"> Card</span><span style="color:#E1E4E8"> {</span></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#F97583"> string</span><span style="color:#B392F0"> name</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#B392F0"> GameObject</span><span style="color:#B392F0"> cardPrefab</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#F97583">    public</span><span style="color:#F97583"> string</span><span style="color:#B392F0"> id</span><span style="color:#E1E4E8">;</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id=""></h2>
+<h2 id="-contoh-implementasi">🚀 Contoh Implementasi</h2>
+<p>Setiap folder memiliki:</p>
+<ul>
+<li>Penjelasan konsep dasar</li>
+<li>Sample code dan use cases</li>
+<li>Tips optimasi</li>
+<li>Common pitfalls yang perlu dihindari</li>
+</ul>
+<hr>
+<p>Dokumentasi ini akan terus diperbarui dengan pattern dan implementasi baru.</p>
