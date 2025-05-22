@@ -1,1 +1,1 @@
-# Software Architecture & Technology
+# Software Architecture and Technology

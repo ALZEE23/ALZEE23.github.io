@@ -1,1 +1,1 @@
-# Mathematics & Physics
+# Mathematics and Physics
