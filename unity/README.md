@@ -1,4 +1,4 @@
-# Unity & C# Code
+# Unity and C# Code
 
 Dokumentasi ini berisi kumpulan tips, trik, dan implementasi kode untuk Unity dan C#.
 Fokus utamanya adalah menyimpan solusi untuk masalah umum yang sering ditemui dalam pengembangan game.
