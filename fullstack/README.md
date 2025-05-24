@@ -1,4 +1,4 @@
-# Fullstack Development Documentation
+# Fullstack Aur Auran
 
 Dokumentasi ini berisi kumpulan tips, trik, dan implementasi untuk pengembangan fullstack.
 Fokus utamanya adalah menyimpan solusi untuk masalah umum yang sering ditemui dalam pengembangan aplikasi web.
