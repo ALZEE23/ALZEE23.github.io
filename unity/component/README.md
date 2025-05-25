@@ -21,6 +21,7 @@ Dokumentasi ini berisi penjelasan dan contoh implementasi component di Unity.
   > Pattern singleton untuk manager dan service classes.
 
 - [`/state-machine`](./state-machine/)
+
   > Implementasi state machine untuk behavior management.
 
 ## 📝 Get Child Component
@@ -90,8 +91,6 @@ public class Card {
     public string id;
 }
 ```
-
-##
 
 ## 🚀 Contoh Implementasi
 
