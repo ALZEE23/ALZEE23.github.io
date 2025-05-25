@@ -38,6 +38,10 @@ Berikut beberapa dokumentasi yang tersedia:
 
   > Ini ngajarin struktur data big o notaion sama time & space complexity.
 
+- [`/fullstack`](./fullstack/)
+
+  > Isinya fullstack instalasi sama implementasi biar gak lupa.
+
 - [`/linux`](./linux)
 
   > Ini buat inget-inget aja kalo lupa cli atau kebodohan gua tentang linux.
