@@ -1,4 +1,4 @@
-# Unity Component Implementation
+# Unity Github Setup 
 
 Dokumentasi ini berisi penjelasan dan contoh implementasi cara collab di Unity.
 

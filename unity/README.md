@@ -13,6 +13,10 @@ Fokus utamanya adalah menyimpan solusi untuk masalah umum yang sering ditemui da
 
   > Teknik dan implementasi sistem kamera dalam Unity.
 
+- [`/collab`](./collab/)
+
+  > Implementasi Github Workflow untuk team.
+
 - [`/cinemachine`](./cinemachine/)
 
   > Penggunaan Cinemachine untuk cinematic camera system.
