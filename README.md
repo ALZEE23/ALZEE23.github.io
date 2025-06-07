@@ -85,7 +85,7 @@ Repositori ini adalah catatan hidup saya dalam perjalanan belajar dan membuat se
 ## 📬 Kontak
 
 Ingin diskusi, saran, atau kolaborasi?  
-Hubungi saya via [GitHub Discussions](https://github.com/ALZEE23/ALZEE23.github.io/discussions) atau buka issue!
+Hubungi saya via [GitHub Issue](https://github.com/ALZEE23/ALZEE23.github.io/issues)!
 
 ---
 
